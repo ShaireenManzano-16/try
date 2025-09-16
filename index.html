@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaireen Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-buttons {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 20px;
+    }
+    
+    .project-content {
+        text-align: left; 
+    }
+}
+
+.icon-container img {
+    width: 50px; 
+    height: 50px; 
+    object-fit: contain; 
+    margin: 5px; 
+}
+
+
+.about-me-content p {
+    text-align: justify; 
+}
+
+#skills .container-lg {
+    max-width: 1200px; 
+    padding: 0 15px; 
+}
+#skills .expertise-box {
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    background-color: #f9f9f9; 
+    transition: transform 0.2s ease; 
+}
+#skills .expertise-box:hover {
+    transform: scale(1.05); 
+}
+
+
+.modal-header.bg-success {
+    background-color: #28a745;
+    border-bottom: none;
+}
+
+.modal-header.bg-danger {
+    background-color: #dc3545;
+    border-bottom: none;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-footer .btn {
+    width: 100px;
+    font-weight: bold;
+}
+
+
+
+        </style>
+</head>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <div class="container">
+        <a class="navbar-brand text-danger fw-bold" href="#">
+            SHAIREEN <span class="text-white">PORTFOLIO</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#trainings">Trainings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-danger ms-2" href="#contact">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="home" style="padding-top:70px; position: relative;">
+    <div style="background-image: url('Port icons/is_web_development_good_career.avif'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat; 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                opacity: 0.10; 
+                z-index: 1;">
+    </div>
+    <div class="container py-5" style="position: relative; z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-md-start text-center">
+                <h4 class="animated-text" style="animation-delay: 0.2s; color: #ffff; font-weight: bold;">Hello, I am Shaireen</h4>
+                <h1 class="animated-text" style="animation-delay: 0.4s; color: #ffff; font-weight: bold;">I’m a <span class="text-danger">Full-Stack Web Developer</span></h1>
+                <p class="animated-text" style="animation-delay: 0.6s; color: #ffff; font-weight: bold;">Mobile Developer and Graphic Designer</p>
+               <a href="https://drive.google.com/file/d/1cvD6X6t9szsEsrWDf4ea80ejzoNdOxib/view?usp=drive_link" 
+                class="btn btn-danger btn-lg rounded-pill animated-button" 
+                style="animation-delay: 0.8s; font-weight: bold;">
+                <i class="fas fa-download me-2"></i> Download Resume
+              </a>
+
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="IMG_20240626_161721.jpg" alt="Profile Picture" class="profile-img animated-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="skills" class="py-5">
+  <div class="container-lg">
+    <h2 class="text-center mb-5">My Expertise</h2>
+    <div class="row text-center gy-4">
+       <!-- Frontend -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="expertise-box p-4 shadow rounded h-100">
+          <h3 class="mb-3">Frontend Development</h3>
+          <div class="icon-container">
+            <img src="Port icons/download (3).jpg" alt="HTML">
+            <img src="Port icons/images.jpg" alt="CSS">
+            <img src="Port icons/download.jpg" alt="Bootstrap">
+            <img src="Port icons/download.png" alt="JavaScript">
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="expertise-box p-4 shadow rounded h-100">
+          <h3 class="mb-3">Backend Development</h3>
+          <div class="icon-container">
+            <img src="Port icons/avo0m3opl.webp" alt="AJAX">
+            <img src="Port icons/images (1).jpg" alt="jQuery">
+            <img src="Port icons/php-icon-2048x2048-zjxns1zh.png" alt="PHP">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="expertise-box p-4 shadow rounded h-100">
+          <h3 class="mb-3">Mobile Development</h3>
+          <div class="icon-container">
+            <img src="Port icons/flutter.png" alt="Flutter">
+            <img src="Port icons/dart.png" alt="Dart">
+            <img src="Port icons/firebase.png" alt="Firebase">
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphic Design -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="expertise-box p-4 shadow rounded h-100">
+          <h3 class="mb-3">Graphic Design</h3>
+          <div class="icon-container">
+            <img src="Port icons/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop">
+            <img src="Port icons/canva.jpg" alt="Canva">
+            <img src="Port icons/figma.png" alt="Figma">
+          </div>
+        </div>
+      </div>
+
+      <!-- Hosting -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="expertise-box p-4 shadow rounded h-100">
+          <h3 class="mb-3">Domain & Hosting</h3>
+          <div class="icon-container">
+            <i class="fas fa-globe"></i>
+            <img src="Port icons/download (1).png" alt="Hostinger">
+            <img src="Port icons/download (1).jpg" alt="AwardSpace">
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Tools -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="expertise-box p-4 shadow rounded h-100">
+          <h3 class="mb-3">Other Tools</h3>
+          <div class="icon-container">
+            <img src="Port icons/git-logo.png" alt="Git">
+            <i class="fab fa-github"></i>
+            <img src="Port icons/vscode.png" alt="Vscode">
+            <img src="Port icons/Android_Studio_svg.png" alt="AndroidStudio">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Progress Bars Section -->
+    <div class="mt-5">
+      <h3 class="text-center mb-4">Skills Progress</h3>
+
+      <div class="mb-3">
+        <label>HTML / CSS</label>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" data-width="90%">0%</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>JavaScript / Bootstrap</label>
+        <div class="progress">
+          <div class="progress-bar bg-info" role="progressbar" data-width="80%">0%</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>PHP / jQuery / AJAX</label>
+        <div class="progress">
+          <div class="progress-bar bg-warning" role="progressbar" data-width="90%">0%</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>Flutter / Dart / Firebase</label>
+        <div class="progress">
+          <div class="progress-bar bg-primary" role="progressbar" data-width="75%">0%</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>Graphic Design (Photoshop, Canva, Figma)</label>
+        <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" data-width="85%">0%</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>Other Tools (Git, Github, VSCode, Android Studio)</label>
+        <div class="progress">
+          <div class="progress-bar bg-secondary" role="progressbar" data-width="95%">0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about">
+  <section class="about-me-section">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Image with animation -->
+        <div class="col-md-5 text-center" data-aos="fade-right" data-aos-duration="1200">
+          <img src="1B4A6582.jpg" alt="About Me Image" class="profile-img-about">
+        </div>
+        
+        <!-- Text with animation -->
+        <div class="col-md-7 about-me-content" data-aos="fade-left" data-aos-duration="1200">
+          <h2>About Me</h2>
+          <p>
+            I am an Information Technology graduate with 2 years of experience in 
+            <strong>web development, mobile app development, and graphic design</strong>. 
+            I build responsive websites using 
+            <strong>HTML, CSS, JavaScript, PHP, and MySQL</strong>, 
+            create mobile apps with 
+            <strong>Flutter, Dart, and Firebase</strong>, 
+            and design 
+            <strong>social media graphics, posters, flyers, and brochures</strong>. 
+            I now focus on freelancing to deliver complete and user-friendly digital solutions for clients.
+          </p>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#aboutMeModal">
+            Read More
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</section>
+
+    <div class="modal fade" id="aboutMeModal" tabindex="-1" aria-labelledby="aboutMeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg"> 
+            <div class="modal-content shadow-lg rounded">
+                <div class="modal-header text-white" style="background-color: #800000;">
+                    <h5 class="modal-title" id="aboutMeModalLabel">About Me</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                <p class="mb-4">
+                            I am an Information Technology graduate from Forbes College with 2 years of experience in web and system development. My expertise includes analyzing business requirements, designing user flows, and translating them into wireframes and prototypes using <strong>Figma</strong>. These skills were honed through my capstone project, on-the-job training, and professional work experience.
+                        </p>
+
+                        <p class="mb-4">
+                            I specialize in building web systems using <strong>HTML, CSS, JavaScript, PHP, APIs</strong>, and database management with <strong>MySQL/XAMPP</strong>. I also have experience troubleshooting hardware and software issues, which I practiced during my immersion at the DSWD Region V Office.
+                        </p>
+
+                        <p class="mb-4">
+                            Beyond web development, I have strong skills in <strong>graphic design</strong>, creating <strong>posters, social media content, flyers, and brochures</strong>. This creative background helps me deliver not only functional but also visually appealing digital products.
+                        </p>
+
+                        <p class="mb-4">
+                            I also developed a small-scale <strong>mobile application project</strong> — a <strong>car booking app</strong> — using <strong>Flutter, Dart, and Firebase</strong>. This project gave me hands-on experience in mobile UI design, user authentication, and database integration.
+                        </p>
+
+                        <p class="mb-4">
+                            Over the past 2 years, I have worked on multiple projects including client-based systems like hotel reservations and custom webpages. I also served as an academic server during my college years, which strengthened my task management and leadership skills.
+                        </p>
+
+                        <p>
+                            Professionally, I worked as a <strong>Junior Web Developer</strong> under the Product Development Group of Myracle Innovation Inc., where I contributed to two company websites: the <strong>Kinetic website</strong> and the <strong>Primavisio website</strong>. I utilized <strong>HTML, CSS, Bootstrap, JavaScript, jQuery, AJAX, PHP</strong>, and <strong>MySQL</strong> in these projects. With 2 years of combined academic and professional experience, I am now focused on freelancing to help businesses build user-friendly, functional, and visually engaging digital solutions.
+                        </p>
+
+
+                </div>
+                <div class="modal-footer bg-light">
+                   <button type="button" class="btn text-white" style="background-color: #800000;" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+<!-- Services Section -->
+<section id="services" style="background: #000; color: #fff; padding: 80px 0;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-size: 2.5rem; font-weight: 700;" data-aos="fade-up">
+      My Services
+    </h2>
+    <div class="row text-center">
+
+      <!-- Service Item -->
+      <div class="col-md-6 col-lg-3 mb-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="service-item">
+          <div class="icon-circle">
+            <i class="fas fa-code"></i>
+          </div>
+          <h4>Web Development</h4>
+          <p>Business websites, e-commerce, and custom systems tailored for your needs.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 mb-5" data-aos="zoom-in" data-aos-delay="200">
+        <div class="service-item">
+          <div class="icon-circle">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h4>Mobile App Development</h4>
+          <p>Android/iOS apps using Flutter such as login and register user accounts, booking apps, and CRUD apps.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 mb-5" data-aos="zoom-in" data-aos-delay="300">
+        <div class="service-item">
+          <div class="icon-circle">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h4>Graphic Design</h4>
+          <p>Banners, flyers, brochures, social media posts, and UI/UX design with a modern touch.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 mb-5" data-aos="zoom-in" data-aos-delay="400">
+        <div class="service-item">
+          <div class="icon-circle">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h4>Website Maintenance & Support</h4>
+          <p>Bug fixing, speed optimization, and security updates to keep your site running smoothly.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2 class="text-center mb-4">My Projects</h2>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs justify-content-center" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab">Web Development</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile" type="button" role="tab">Mobile Apps</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" type="button" role="tab">Graphic Design / Figma</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-4">
+      
+      <!-- Web Development -->
+      <div class="tab-pane fade show active" id="web" role="tabpanel" aria-labelledby="web-tab">
+        <div class="row g-4">
+
+          <!-- Project 1 -->
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="screenshot-1735040121154.png" class="img-fluid project-image" alt="Kinetic Website">
+              <div class="project-content">
+                <h3 class="project-title">Kinetic Website – Dynamic Company Website with Inquiry System</h3>
+                <p><strong>Features:</strong> Integrated inquiry form with automated email notifications, responsive Bootstrap UI, and efficient client communication flow.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, jQuery, Ajax, PHP, MySQL, Bootstrap, Email SMTP</p>
+                <a href="demoprojects/kinetic.mp4" class="btn btn-custom">VIEW DEMO</a>
+                <a href="" target="_blank" class="btn btn-outline-custom ms-2">VISIT SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="glamour.jpg" class="img-fluid project-image" alt="Glamour Glow Landing Page">
+              <div class="project-content">
+                <h3 class="project-title">Glamour Glow – Modern Landing Page</h3>
+                <p><strong>Features:</strong> Interactive sections, product highlights, responsive layout, and sleek modern design to improve engagement.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                <a href="demoprojects/miniwebsite.mp4" class="btn btn-custom">VIEW DEMO</a>
+                <a href="https://shaireenmanzano-16.github.io/glamourglow/" target="_blank" class="btn btn-outline-custom ms-2">VISIT SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="screenshot-1735041592432.png" alt="Google API Project" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">Mini Project Web App – Google API Integration</h3>
+                <p><strong>Features:</strong> Real-time data fetching and display from Google services, automated tasks for improved data handling efficiency, responsive web interface.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL, Google API</p>
+                <a href="demoprojects/googleapi.mp4" class="btn btn-custom">VIEW DEMO</a>
+                <a href="" target="_blank" class="btn btn-outline-custom ms-2">VISIT SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="screenshot-1735042203335.png" alt="LTAS System Project" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">LTAS System – Secure Authentication with Email OTP</h3>
+                <p><strong>Features:</strong> Secure login system with OTP email verification, responsive design, reduced unauthorized access, and reliable email notifications.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL, Email API (SMTP/PHPMailer)</p>
+                <a href="demoprojects/ltas-demo.mp4" class="btn btn-custom">VIEW DEMO</a>
+                <a href="" target="_blank" class="btn btn-outline-custom">VISIT SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="pokemonGame.jpg" alt="Pokemon Style Game" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">Pokémon Style Game – Web-Based Adventure</h3>
+                <p><strong>Features:</strong> Interactive character movement, map-based navigation, simple battle system, and retro-inspired UI design using HTML canvas and JavaScript.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+                <a href="" class="btn btn-custom">VIEW DEMO</a>
+                <a href="https://shaireenmanzano-16.github.io/pokemonGame/" target="_blank" class="btn btn-outline-custom ms-2">PLAY GAME</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <!-- Web Development Project: E-Commerce Website -->
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="ecommerce-htmlcss.jpg" class="img-fluid project-image" alt="E-Commerce Website">
+              <div class="project-content">
+                <h3 class="project-title">E-Commerce Website – Frontend Project</h3>
+                <p><strong>Features:</strong> Product listing with categories, responsive grid layout, product detail section, shopping cart design (UI only), and a modern homepage with promotional banners.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS</p>
+                <a href="" class="btn btn-custom">VIEW DEMO</a>
+                <a href="" target="_blank" class="btn btn-outline-custom ms-2">VISIT SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="rfid.jpg" alt="Employee Management System with RFID" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">Employee Management System – RFID Integration</h3>
+                <p><strong>Features:</strong> Employee registration and profile management, RFID-based attendance tracking, real-time logs of employee check-in/out, admin dashboard with reports, and responsive Bootstrap UI for easy navigation.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Bootstrap, PHP, MySQL, RFID Integration</p>
+                <a href="demoprojects/employee-rfid.mp4" class="btn btn-custom">VIEW DEMO</a>
+                <a href="" target="_blank" class="btn btn-outline-custom ms-2">VISIT SITE</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development Project: Car Booking Web System -->
+        <div class="col-md-6">
+          <div class="project-card">
+            <img src="carpool.jpg" class="img-fluid project-image" alt="Car Booking Web System">
+            <div class="project-content">
+              <h3 class="project-title">Car Booking Web System – Full Stack Project</h3>
+              <p><strong>Features:</strong> 
+                Real-time notifications for bookings and incoming messages, role-based access (Admin, Passenger, Driver), driver registration with admin approval, passenger signup with OTP via SMS, booking and cancellation management, messaging system, profile updates, and revenue history tracking.
+              </p>
+              <p><strong>Tech Stack:</strong> PHP, MySQL, Bootstrap, JavaScript, AJAX</p>
+              <a href="" class="btn btn-custom">VIEW DEMO</a>
+                <a href="" target="_blank" class="btn btn-outline-custom ms-2">VISIT SITE</a>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+
+      <!-- Mobile Apps -->
+      <div class="tab-pane fade" id="mobile" role="tabpanel" aria-labelledby="mobile-tab">
+        <div class="row g-4">
+         <!-- Mobile App Project: Car Booking App -->
+        <div class="col-md-6">
+          <div class="project-card">
+            <img src="car-booking-app.jpg" class="img-fluid project-image" alt="Car Booking App">
+            <div class="project-content">
+              <h3 class="project-title">Car Booking App – Mobile Application</h3>
+              <p><strong>Features:</strong> User login & registration, real-time notifications, book and cancel bookings, view terms and conditions, update user profile, and responsive layout for smooth navigation.</p>
+              <p><strong>Tech Stack:</strong> Flutter, Firebase, Dart</p>
+              <a href="https://drive.google.com/file/d/1TF0DnwPwZ3z7yxkukgM3d79GdhOYL6TP/view?usp=sharing" class="btn btn-custom">VIEW DEMO</a>
+              <a href="" target="_blank" class="btn btn-outline-custom ms-2">VISIT APP</a>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+      <!-- Graphic Design / Figma -->
+      <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="project-card">
+              <img src="Screenshot (184).png" class="img-fluid project-image" alt="Figma Project">
+              <div class="project-content">
+                <h3 class="project-title">WIREFRAMES & PROTOTYPE</h3>
+                <p>Capstone Project (Figma)</p>
+                <a href="https://www.figma.com/proto/wEAjWXyj406cDPEiDVDbnM" class="btn btn-danger">VISIT LINK</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Another Figma Project -->
+        <div class="col-md-6">
+          <div class="project-card">
+            <img src="AL AASAF.png" class="img-fluid project-image" alt="AL Aasaf Poster">
+            <div class="project-content">
+              <h3 class="project-title">AL ASSAF Contracting Poster – Graphic Design Project</h3>
+              <p><strong>Short Description:</strong> Designed an engaging social media poster for AL ASSAF Contracting, optimized for Instagram Reels and online campaigns. Focused on bold typography, vibrant colors, and clear messaging to capture audience attention quickly.</p>
+              <p><strong>Tools:</strong> Canva</p>
+              <a href="https://www.canva.com/design/DAGw9LeXOUg/VQEVXAzrjFIJLC8J3RVWzA/edit?utm_content=DAGw9LeXOUg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-danger">VIEW DESIGN</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RVNI Social Media Poster -->
+        <div class="col-md-6">
+          <div class="project-card">
+            <img src="RVNI-Eccomerce.png" class="img-fluid project-image" alt="RVNI Social Media Poster">
+            <div class="project-content">
+              <h3 class="project-title">RVNI Social Media Poster – Graphic Design Project</h3>
+              <p><strong>Short Description:</strong> Eye-catching social media poster design, optimized for online engagement, consistent branding, and visually appealing layout.</p>
+              <p><strong>Tools:</strong> Photoshop</p>
+              <a href="https://www.figma.com/file/your-link-here" target="_blank" class="btn btn-danger">VIEW DESIGN</a>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="trainings">
+    <section class="trainings-section">
+        <div class="container">
+            <h2 class="text-center">Trainings</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="training-card">
+                        <img src="Trainings/certificate.Frontend Fundamentals Bootcamp_Shaireen .png" alt="Training 1" class="training-image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-card">
+                        <img src="Trainings/certificate.Data Analytics Fundamentals_Shaireen .png" alt="Training 2" class="training-image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-card">
+                        <img src="Trainings/Screenshot_20241224_203006.jpg" alt="Training 3" class="training-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+
+    <section class="feedback-section py-5" style="background-color: #000;">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white">Client's Feedback</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feedback-card p-4 shadow-sm rounded bg-dark text-white">
+                        <div class="feedback-header d-flex align-items-center mb-3">
+                            <div class="feedback-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; font-size: 1.5rem;">W</div>
+                            <div>
+                                <div class="feedback-name fw-bold text-white fs-5">Wiz Acad</div>
+                                <div class="feedback-project text-muted">Figma Project</div>
+                            </div>
+                        </div>
+                        <div class="feedback-text">
+                            <p class="text-light">Thank you so much for the smooth transaction and accepting the commission within the budget. My request got followed and you are consistent when it comes to progress. I will surely come back.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feedback-card p-4 shadow-sm rounded bg-dark text-white">
+                        <div class="feedback-header d-flex align-items-center mb-3">
+                            <div class="feedback-avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; font-size: 1.5rem;">D</div>
+                            <div>
+                                <div class="feedback-name fw-bold text-white fs-5">Dino Barrera</div>
+                                <div class="feedback-project text-muted">Capstone Project</div>
+                            </div>
+                        </div>
+                        <div class="feedback-text">
+                            <p class="text-light">Thank you so much for your excellent work. Our system has been approved, and we appreciate your dedication and effort throughout the project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Any questions? Write your inquiries here.</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 contact-image">
+                        <img src="Trainings/80b4c8eca5291255732a9d4e3eeb8826.gif" alt="Mail Icon" width="400">
+                    </div>
+                    <div class="col-md-6">
+                        <form id="contactForm" action="https://formspree.io/f/xeooprrk" method="POST">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required>
+                            <textarea name="message" class="form-control" id="message" placeholder="Message" rows="5" required></textarea>
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Success Modal -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="successModalLabel"><i class="fas fa-check-circle"></i> Inquiry Submitted</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <p class="mb-0" style="color: black;">Thank you for reaching out! Your inquiry has been successfully submitted. We will get back to you shortly.</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-success" onclick="redirectToIndex()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="errorModalLabel"><i class="fas fa-times-circle"></i> Submission Failed</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-0">Oops! There was an issue submitting your inquiry. Please try again later.</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </section>
+    </section>
+    
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-left">
+                        <h4 style="color:red">SHAIREEN MANZANO</h4>
+                        <p>Bicol, Tagalog, English</p>
+                        <p>Albay, Philippines</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-right">
+                        <h4>Contact me</h4>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/shairen-manzano-933114316" target="_blank"><img src="Trainings/download (2).png" alt="LinkedIn" width="20"></a>
+                            <a href="https://www.facebook.com/shaireen.manzano" target="_blank"><img src="Trainings/download.png" alt="Facebook" width="20"></a>
+                            <a href="https://www.instagram.com/shaireenmanzano16/profilecard/?igsh=MWphaml1OHdqZmw2MQ==" target="_blank"><img src="Trainings/download (2).jpg" alt="Instagram" width="20"></a>
+                            <a href="https://www.tiktok.com/@shang.dev?_t=ZS-8spaxUVKMYk&_r=1" target="_blank"><img src="Trainings/tiktok.png" alt="Facebook" width="20"></a>
+                            <a href="https://join.skype.com/invite/qAHbOdN1adHS" target="_blank"><img src="Trainings/skype.png" alt="Facebook" width="20"></a>
+                        </div>
+                        <p>Viber or Whatsapp: +639517026141</p>
+                        <p>shaireenmanzano8@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shaireen Portfolio All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
